@@ -1,0 +1,209 @@
+:root {
+    --azul: #134074;
+    --azul-oscuro: #0b2545;
+    --verde: #5dac3b;
+    --verde-oscuro: #7aad62;
+    --naranja: #fb601f;
+    --naranja-oscuro: #e5480c;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --rojo: rgb(218, 31, 31);
+    --fuente-principal: sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* * UTILIDADES GLOBALES */
+
+.no-margin {
+    margin: 0;
+}
+
+/* * LOGIN */
+
+    .centar-contendio {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (orientation: landscape) and (max-width: 991px){ 
+        .centar-contendio {
+            margin: 4rem;
+        }
+    }
+
+    .contenedor, .bg-color {
+        background-color: var(--azul);
+    }
+
+    @media (min-width: 992px){
+        .contenedor {
+            max-width: 120rem;
+            width: 95%;
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+        }
+
+        .bg-color {
+            background-color: var(--azul-oscuro);
+        }
+    }
+
+    /* * CONTENEDOR IMAGEN */ 
+
+        @media (min-width: 992px){
+            .contenedor__imagen {
+                background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), 
+                url("../img/login.png");
+                background-position: center center;
+                background-size: cover;
+                height: auto;
+            }
+        }
+
+    /* * CONTENEDOR FORMULARIO */
+
+        .contenedor__formulario {
+            padding: 2rem;
+        }
+
+        @media (min-width: 992px){
+            .contenedor__formulario {
+                padding: 5rem;
+            }
+        }
+
+        .bienvenida {
+            text-align: center;
+            color: var(--blanco);
+            margin-bottom: 2.8rem;
+        }
+
+            .bienvenida h1 {
+                font-size: 4rem;
+                margin-bottom: 1.8rem;
+            }
+
+            .bienvenida p {
+                font-size: 1.8rem;
+            }
+
+        .usuario, 
+        .contraseña{
+            color: var(--blanco);
+            margin-bottom: 1.8rem;
+        }
+
+            .usuario label, 
+            .contraseña label {
+                display: block;
+                margin-bottom: .8rem;
+            }
+
+            .usuario input[type="text"], 
+            .contraseña input[type="password"] {
+                padding: 1rem 1.6rem;
+                border-radius: .5rem;
+                border: none;
+                width: 100%;
+            }
+
+    /* * MENSAJE DE ERROR */
+
+        .error-box {
+            background-color: var(--rojo);
+            margin-bottom: 1.8rem;
+        }
+
+        .error-box--hide {
+            display: none;
+        }
+
+            .error-box p {
+                text-align: center;
+                color: var(--blanco);
+                padding: .8rem;
+            }    
+
+    /* * BOTON */
+    
+        .boton-login {
+            background-color: var(--verde);
+            color: var(--blanco);
+            border: none;
+            border-radius: .5rem;
+            padding: 1.3rem;
+            width: 100%;
+        }
+
+        .boton-login:hover {
+            background-color: var(--verde-oscuro);
+            cursor: pointer;
+        }
+
+/* * ADMIN */
+
+    /* * MENSAJE DE CONFIRMACION */
+
+        .mensaje-confirmacion {
+            background-color: var(--verde);
+            margin-bottom: 1.8rem;
+        }
+
+        .mensaje-confirmacion--hide {
+            display: none;
+        }
+
+            .mensaje-confirmacion p {
+                text-align: center;
+                color: var(--blanco);
+                padding: .8rem;
+            }
+
+    /* * CHECBOX */
+
+    .input-check label{
+        display: inline-block;
+        color: var(--blanco);
+        margin-bottom: 1.8rem;
+    }
+
+    /* * BOTON CERRAR SESION */
+
+        .boton-cerrarSesion {
+            background-color: var(--naranja);
+            border: none;
+            border-radius: .5rem;
+            padding: 1.3rem;
+            margin-top: 1.8rem;
+            text-align: center;
+        }
+
+        .boton-cerrarSesion a{
+            display: block;
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .boton-cerrarSesion:hover{
+            cursor: pointer;
+            background-color: var(--naranja-oscuro);
+        }
